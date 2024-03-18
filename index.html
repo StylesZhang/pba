@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="PHOTOSWAP: Personalized Subject Swapping in Images">
-  <meta name="keywords" content="Object Swapping, Personalized Editing">
+        content="Navigation as Attackers Wish? Towards Building Byzantine-Robust Embodied Agents under Federated Learning">
+  <meta name="keywords" content="Backdoor Attack and Defense, Embodied Agent">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Navigation as Attackers Wish? Towards Building Robust Embodied Agents under Federated Learning</title>
 
@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">PHOTOSWAP: Personalized Subject Swapping in Images</h1>
+          <h1 class="title is-1 publication-title">Navigation as Attackers Wish? Towards Building Byzantine-Robust Embodied Agents under Federated Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://styleszhang.github.io">Yunchao Zhang</a>,</span>
@@ -115,8 +115,8 @@
     <div class="hero-body">
       <img id="teaser" width="150%" src="./static/images/teaser-1.png?03222242">
       <h2 class="subtitle has-text-centered">
-        <p style="font-family:Times New Roman"><b>Figure 1. Illustration for the targeted backdoor attack in federated vision-and-language navigation. The green
-          clients refer to the benign clients with ground-truth training data, while the red client refers to the malicious client (attacker) with poisoned training data. The ref
+        <p style="font-family:Times New Roman"><b>Figure 1. Illustration for the targeted backdoor attack NAW in federated vision-and-language navigation. The green
+          clients refer to the benign clients with ground-truth training data, while the red client refers to the malicious client (attacker) with poisoned training data. The red
           flag added in the view is the trigger from the attacker. With the targeted attack, the agent will miss the correct route (green line) and turn to the expected route as the attacker wishes without following the language
           instruction. </b></p>
       </h2>
@@ -155,7 +155,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Controllable Subject Swapping via Training-free Attention Swapping </h2> 
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Prompt-based Defense Method </h2> 
       </div>
     </div>
 
@@ -163,14 +163,14 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <ul>
-                <li>Given several images of a new concept, the diffusion model first learns the concept and converts it into a token. </li>
-                <li>The attention output and attention map in the source image generation process are stored as control source </li>
-                <li>The stored intermediate variables would be transferred to the target image generation process</li>
+                <li>Besides normal model update and aggregation, local prompt in the client is utilized and updated during the local training process </li>
+                <li>The local prompt would be an important reference to distinguish malicious clients after it is sent to the server. </li>
+                <li>The local prompt is initialized by a fixed global prompt at each communication round</li>
               </ul>
             </div>        
-            <img id="model" width="100%" src="./static/images/architecture.png">
+            <img id="model" width="100%" src="./static/images/method-1.png">
             <h3 class="subtitle has-text-centered">
-              <p style="font-family:Times New Roman"><b>Figure 2. Photoswap pipeline.</b></p>
+              <p style="font-family:Times New Roman"><b>Figure 2. Prompt-based Aggregation (PBA).</b></p>
             </h3>   
 
 
