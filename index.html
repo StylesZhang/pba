@@ -183,7 +183,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Attention Swap Analysis </h2> 
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Experimental Results of Defense </h2> 
       </div>
     </div>
 
@@ -191,15 +191,14 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <ul>
-                <li> With consistent steps, swapping the self-attention output provides superior control over the layout, including the subject's gestures and the background details.</li>
-                <li> Excessive swapping could affect the subject's identity, as the new concept introduced through the text prompt might be overshadowed by the swapping of the attention output or attention map.  </li>
-                <li> Replacing the attention map for an extensive number of steps can result in an image with significant noise, possibly due to a compatibility issue between the attention map and the v vector.</li>
+                <li> We use Attack Success Rate (ASR) to evaluate the robustness of our defense method <b>PBA</b>.</li>
+                <li> Compared to other Robust Aggregation Rules, <b>PBA</b> gets the lowest ASR on different models under both seen and unseen environments </li>
               </ul>
             </div>        
-            <img id="model" width="100%" src="./static/images/step_analysis.png">
+            <img id="model" width="100%" src="./static/images/attack.png">
             <h3 class="subtitle has-text-centered">
-              <p style="font-family:Times New Roman"><b>Figure 3. Results at different swapping steps. </b></p>
-            </h3>   
+              <p style="font-family:Times New Roman"><b>Figure 3. Results between different defense methods on R2R and RxR. Lower is better. </b></p>
+            </h3>
         </div>
   </div>
 </section>
