@@ -211,22 +211,14 @@
 
         <!-- Abstract. -->
         <div style="float:left; width:47.1%; border: 0px solid black;">
-          <h2 class="title is-5">I. Visualization of PBA</h2>
+          <h2 class="title is-5">I. Impact of the number of malicious cliets</h2>
           <div class="content has-text-justified">
-            During aggregation, the matrix computed by <b>PBA</b> ((c) and (d))can efficiently detect the malicious client, 
-            which calculates the similarity between the uploaded prompts between clients. However, the matrix ((a) and (b)) computed by 
-            traditional aggregation rules can't distinguish the difference between malicious and benign clients, which calculates the distance
-            between uploaded model parameters from clients.
+            sss,
           </div>  
 
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="105%" src="./static/images/att_frac.png" style="margin-bottom:20px;">
-              </div>
-          </div>
-          <div class="column is-five-fifths">
-              <div class="columns is-centered">
-                <img id="modulated_training" width="105%" src="./static/images/att_num.png">
+                <img id="modulated_training" width="105%" src="./static/images/att_frac.png">
               </div>
           </div>
         </div>
@@ -235,11 +227,7 @@
         <div style=" float:right; width:47.8%; border: 0px solid black;">
           <h2 class="title is-5">II. Variants of PBA</h2>
           <div class="content has-text-justified">
-            The prompt in <b>PBA</b> is inserted before the cross-attention module. Here we compare it to two variants to show the uniqueness of
-            the mechanism of <b>PBA</b>. <b>PBA-Input</b> inserts the prompts in the input rather than the cross-attention module.
-            <b>PBA-Param</b> use the parameters of the cross-attention module to calculate the distance matrix instead of inserting prompts.
-            The superior performance of <b>PBA</b> reinforces the notion that focusing on smaller data not only enhances computational efficiency but also yields a more 
-            precise identification of attack-induced variances.
+            sws
           </div>  
 
           <div class="column is-five-fifths">
@@ -249,7 +237,29 @@
           </div>
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="97%" src="./static/images/def_env.png">
+                <img id="modulated_training" width="97%" src="./static/images/att_num.png">
+              </div>
+          </div>
+        </div>
+
+      </div>  
+    </div>     
+</section>
+
+<section class="section"   style="background-color:#dbeef3">
+  <div class="columns is-centered has-text-centered">
+      <div style="width:90%;">
+
+        <!-- Abstract. -->
+        <div style="center; width:47.1%; border: 0px solid black;">
+          <h2 class="title is-5">I. Impact of the number of malicious cliets</h2>
+          <div class="content has-text-justified">
+            sss,
+          </div>  
+
+          <div class="column is-five-fifths">
+              <div class="columns is-centered">
+                <img id="modulated_training" width="105%" src="./static/images/att_frac.png">
               </div>
           </div>
         </div>
@@ -270,11 +280,13 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <p>
-                From everyday objects to cartoon, the diversity in subject swapping tasks has showcased
-                the versatility and robustness of our framework across different contexts.
+                During aggregation, the matrix computed by <b>PBA</b> ((c) and (d))can efficiently detect the malicious client, 
+                which calculates the similarity between the uploaded prompts between clients. However, the matrix ((a) and (b)) computed by 
+                traditional aggregation rules can't distinguish the difference between malicious and benign clients, which calculates the distance
+                between uploaded model parameters from clients.
               </p>
             </div>        
-            <img id="model" width="100%" src="./static/images/more-results.png">
+            <img id="model" width="100%" src="./static/images/mat.png">
             <h3 class="subtitle has-text-centered">
               <p style="font-family:Times New Roman"><b>Figure 4. More results at various domains. </b></p>
             </h3>   
@@ -293,8 +305,11 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <p>
-                We set P2P+DreamBooth as a baseline for Photoswap. The former faces challenges in 
-                preserving both the background and the reference subject accurately, while for Photoswap, it is robust to handle various cases.
+                The prompt in <b>PBA</b> is inserted before the cross-attention module. Here we compare it to two variants to show the uniqueness of
+                the mechanism of <b>PBA</b>. <b>PBA-Input</b> inserts the prompts in the input rather than the cross-attention module.
+                <b>PBA-Param</b> use the parameters of the cross-attention module to calculate the distance matrix instead of inserting prompts.
+                The superior performance of <b>PBA</b> reinforces the notion that focusing on smaller data not only enhances computational efficiency but also yields a more 
+                precise identification of attack-induced variances.
               </p>
             </div>        
             <img id="model" width="100%" src="./static/images/p2p-compare.png">
