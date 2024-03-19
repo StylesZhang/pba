@@ -211,28 +211,30 @@
 
         <!-- Abstract. -->
         <div style="float:left; width:47.1%; border: 0px solid black;">
-          <h2 class="title is-5">I. Impact of the number of malicious cliets</h2>
+          <h2 class="title is-5">I. Attack: Impact of the number of malicious cliets</h2>
           <div class="content has-text-justified">
-            sss,
+            The number of malicious clients is positively correlated with ASR and its increase accelerates the convergence of ASR.
+            However, when the number is over 20, the performance of the navigation Success Rate (SR) is clearly affected. 
           </div>  
 
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="105%" src="./static/images/att_frac.png">
+                <img id="modulated_training" width="105%" src="./static/images/att_num.png">
               </div>
           </div>
         </div>
         <!--/ Abstract. -->
 
         <div style=" float:right; width:47.8%; border: 0px solid black;">
-          <h2 class="title is-5">II. Impact of the fraction of poisoned data</h2>
+          <h2 class="title is-5">II. Attack: Impact of the fraction of poisoned data</h2>
           <div class="content has-text-justified">
-            sws
+            A larger fraction does not lead to a higher ASR; on the contrary, it obtains an even lower ASR than a smaller fraction of poisoned data.
+            The navigation performance Success Rate (SR) becomes lower when the fraction of poisoned data is higher
           </div>  
 
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="97%" src="./static/images/att_num.png">
+                <img id="modulated_training" width="97%" src="./static/images/att_frac.png">
               </div>
           </div>
         </div>
@@ -246,21 +248,37 @@
       <div style="width:90%;">
 
         <!-- Abstract. -->
-        <div style="width:47.1%; border: 0px solid black;">
-          <h2 class="title is-5">I. Impact of the number of malicious cliets</h2>
+        <div style="float:left; width:47.1%; border: 0px solid black;">
+          <h2 class="title is-5">III. Defense: Impact of different variables</h2>
           <div class="content has-text-justified">
-            sss,
+            Evaluate the impact of different variables with CLIP-ViL.
+            <b>PBA</b> outperforms other defense methods under different settings but is gradually unable to resist the attack when the power of attackers gets stronger.
           </div>  
 
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="105%" src="./static/images/.png">
+                <img id="modulated_training" width="105%" src="./static/images/def.png">
+              </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <div style=" float:right; width:47.8%; border: 0px solid black;">
+          <h2 class="title is-5">. IV. Impact of different variables</h2>
+          <div class="content has-text-justified">
+            Evaluate the impact of different variables with EnvDrop.
+            <b>PBA</b> outperforms other defense methods under different settings but is gradually unable to resist the attack when the power of attackers gets stronger.
+          </div>  
+
+          <div class="column is-five-fifths">
+              <div class="columns is-centered">
+                <img id="modulated_training" width="97%" src="./static/images/def_env.png">
               </div>
           </div>
         </div>
 
       </div>  
-    </div>     
+    </div>      
 </section>
 
 
@@ -275,7 +293,7 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <p>
-                During aggregation, the matrix computed by <b>PBA</b> ((c) and (d))can efficiently detect the malicious client, 
+                During aggregation, the matrix computed by <b>PBA</b> ((c) and (d)) can efficiently detect the malicious client, 
                 which calculates the similarity between the uploaded prompts between clients. However, the matrix ((a) and (b)) computed by 
                 traditional aggregation rules can't distinguish the difference between malicious and benign clients, which calculates the distance
                 between uploaded model parameters from clients.
@@ -283,7 +301,7 @@
             </div>        
             <img id="model" width="100%" src="./static/images/mat.png">
             <h3 class="subtitle has-text-centered">
-              <p style="font-family:Times New Roman"><b>Figure 4. More results at various domains. </b></p>
+              <p style="font-family:Times New Roman"><b>Figure 4. The illustration of the difference of the method to calculate the distance matrix and similarity matrix of previous methods ((a) and (b)) and PBA ((c) and (d)) </b></p>
             </h3>   
         </div>
   </div>
