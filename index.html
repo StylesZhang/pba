@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Navigation as Attackers Wish? Towards Building Byzantine-Robust Embodied Agents under Federated Learning</h1>
+          <h1 class="title is-1 publication-title">Navigation as Attackers Wish? Towards Building Robust Embodied Agents under Federated Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://styleszhang.github.io">Yunchao Zhang</a>,</span>
@@ -213,7 +213,10 @@
         <div style="float:left; width:47.1%; border: 0px solid black;">
           <h2 class="title is-5">I. Visualization of PBA</h2>
           <div class="content has-text-justified">
-            During aggregation, the matrix computed by <b>PBA</b> can efficiently detect the malicious client.                 
+            During aggregation, the matrix computed by <b>PBA</b> ((c) and (d))can efficiently detect the malicious client, 
+            which calculates the similarity between the uploaded prompts between clients. However, the matrix ((a) and (b)) computed by 
+            traditional aggregation rules can't distinguish the difference between malicious and benign clients, which calculates the distance
+            between uploaded model parameters from clients.
           </div>  
 
           <div class="column is-five-fifths">
@@ -226,14 +229,18 @@
         <!--/ Abstract. -->
 
         <div style=" float:right; width:47.8%; border: 0px solid black;">
-          <h2 class="title is-5">II. Occluded subject swap</h2>
+          <h2 class="title is-5">II. Variants of PBA</h2>
           <div class="content has-text-justified">
-            Photoswap can identify the target object while avoiding influencing the non-subject pixels                  
+            The prompt in <b>PBA</b> is inserted before the cross-attention module. Here we compare it to two variants to show the uniqueness of
+            the mechanism of <b>PBA</b>. <b>PBA-Input</b> inserts the prompts in the input rather than the cross-attention module.
+            <b>PBA-Param</b> use the parameters of the cross-attention module to calculate the distance matrix instead of inserting prompts.
+            The superior performance of <b>PBA</b> reinforces the notion that focusing on smaller data not only enhances computational efficiency but also yields a more 
+            precise identification of attack-induced variances.
           </div>  
 
           <div class="column is-five-fifths">
               <div class="columns is-centered">
-                <img id="modulated_training" width="97%" src="./static/images/occluded.png">
+                <img id="modulated_training" width="97%" src="./static/images/var.png">
                 
               </div>
           </div>
